@@ -1,4 +1,4 @@
-CodicTranslater = require './translator'
+CodicTranslator = require './translator.coffee'
 {CompositeDisposable} = require 'atom'
 
 module.exports =
@@ -9,9 +9,12 @@ module.exports =
       see: https://datamarket.azure.com/dataset/bing/microsofttranslator#schema'
       type: 'string'
       default: 'awesame_token'
+    to_lang:
+      title: 'to translation language'
+      description: 'en, ja, anything'
+      type: 'string'
+      default: 'ja'
 
-  codicCallerView: null
-  modalPanel: null
   subscriptions: null
 
   activate: (state) ->
@@ -22,18 +25,18 @@ module.exports =
     @subscriptions.add atom.commands.add 'atom-workspace', 'code-translater:translate': => @translate()
 
   deactivate: ->
-    @modalPanel.destroy()
     @subscriptions.dispose()
-    @codicCallerView.destroy()
 
   serialize: ->
-    codicCallerViewState: @codicCallerView.serialize()
 
   translate: ->
     editor = atom.workspace.getActiveTextEditor()
     return unless editor?
 
-    translater = new Translator('5Vh4kzUzgNJ2ILUezimcIMwgnHTDJfCcCjNj6T76/EA=')
-    token = translater.translate('認証', 'en', {})
-
     selected_text = editor.tokenForBufferPosition(editor.getCursorBufferPosition())
+
+    translator = new CodicTranslator(atom.config.get('code-translater.token'))
+
+    translator.detect(selected_text.value)
+    #translator.speak(selected_text.value)
+    translated_string = translator.translate(selected_text.value, atom.config.get('code-translater.to_lang'))

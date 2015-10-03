@@ -1,3 +1,0 @@
-CodicTranslater	/Users/Sansan_HK/github/codic-caller/lib/codic-translater.coffee	/^  class CodicTranslater$/;"	function	line:5
-constructor	/Users/Sansan_HK/github/codic-caller/lib/codic-translater.coffee	/^    constructor: (api_secret)->$/;"	function	line:11
-getAccessToken	/Users/Sansan_HK/github/codic-caller/lib/codic-translater.coffee	/^    getAccessToken: (secret)->$/;"	function	line:17

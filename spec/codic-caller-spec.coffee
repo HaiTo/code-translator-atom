@@ -1,4 +1,4 @@
-CodicCaller = require '../lib/codic-caller'
+CodicCaller = require '../lib/code-translater'
 
 # Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 #

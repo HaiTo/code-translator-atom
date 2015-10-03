@@ -1,9 +1,0 @@
-!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
-!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
-!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
-!_TAG_PROGRAM_NAME	Exuberant Ctags	//
-!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.8	//
-CodicTranslater	/Users/Sansan_HK/github/codic-caller/lib/codic-translater.coffee	/^  class CodicTranslater$/;"	function	line:5
-constructor	/Users/Sansan_HK/github/codic-caller/lib/codic-translater.coffee	/^    constructor: (api_secret)->$/;"	function	line:11
-getAccessToken	/Users/Sansan_HK/github/codic-caller/lib/codic-translater.coffee	/^    getAccessToken: (secret)->$/;"	function	line:17
