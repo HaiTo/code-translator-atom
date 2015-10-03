@@ -1,0 +1,22 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+'context-menu':
+  'atom-text-editor': [
+    {
+      'label': 'translate'
+      'command': 'code-translater:translate'
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'code-translater'
+      'submenu': [
+        {
+          'label': 'translate'
+          'command': 'code-translater:translate'
+        }
+      ]
+    ]
+  }
+]
